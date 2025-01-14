@@ -1,6 +1,6 @@
 # BrandScan
 
-Created a game called BrandScan where the user has to guess the logo of the company being displayed with a timer of 5 minutes.
+Created a game called BrandScan where the user has to guess the logo of the company being displayed within a given time frame.
 
 The games has two modes: Beginner and Advanced
 
