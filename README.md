@@ -1,8 +1,16 @@
-# React + Vite
+# BrandScan
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Created a game called BrandScan where the user has to guess the logo of the company being displayed with a timer of 5 minutes.
 
-Currently, two official plugins are available:
+The games has two modes: Beginner and Advanced
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Beginner Mode
+A logo will be displayed and 4 options will be visible, user has to select the correct one.
+
+## Adbacnced Mode
+A logo will be displayed and the user has to type the name of the logo displayed on screen in the provided text area.
+##
+At the end of the quiz, a sharable image is generated.
+
+## Play:
+https://brandscan-psf.web.app
