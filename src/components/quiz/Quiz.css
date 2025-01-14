@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.App {
+    text-align: center;
+    height: 90vh !important;
+    max-width: 90vw;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    position: relative;
+    overflow: auto;
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container hr {
+    height: 2px;
+    border: none;
+    background: #e0e0e0;
+}
+
+.timer {
+    width: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #6a1b9a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.timer span {
+    font-size: 24px;
+    color: #8e24aa;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.score {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #6a1b9a;
+    animation: bounceIn 0.8s;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo-container {
+    margin: 20px 0;
+}
+
+.logo-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin: auto;
+    border: 3px solid #f3e5f5;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.option-button {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    background: #d1c4e9; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #4a148c;
+    font-weight: bold;
+}
+
+.option-button:hover {
+    background: #7e57c2;
+    border-color: #5e35b1;
+    transform: scale(1.05);
+}
+
+.option-button:focus {
+    outline: 3px solid #7e57c2;
+    transform: scale(1.05);
+}
+
+.option-button.correct {
+    background-color: #22c55e;
+    color: #ffffff;
+    border: none;
+}
+
+.option-button.wrong {
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 12px 18px;
+    font-size: 16px;
+    background: #d1c4e9;
+    color: #4a148c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.next-button:hover {
+    background: #7e57c2; 
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.next-button:disabled {
+    background: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .App {
+        height: auto;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .logo-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .option-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .next-button {
+        width: 100%;
+        font-size: 16px;
+    }
+}
